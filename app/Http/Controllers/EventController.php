@@ -22,7 +22,6 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-
         $event = new Event;
 
         $event->title = $request->title;
@@ -30,7 +29,7 @@ class EventController extends Controller
         $event->private = $request->private;
         $event->description = $request->description;
 
-        // Upload Image
+        // Image Upload 
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
 
             $requestImage = $request->image;
@@ -46,5 +45,12 @@ class EventController extends Controller
         $event->save();
 
         return redirect('/')->with('msg', 'Evento criado com sucesso!');
+    }
+
+    public function show($id)
+    {
+        $event = Event::findOrFail($id);
+
+        return view('events.show', ['event' => $event]);
     }
 }
