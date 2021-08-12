@@ -18,7 +18,7 @@
         <ion-icon name="people-outline"></ion-icon>X Participantes
       </p>
       <p class="event-owner">
-        <ion-icon name="star-outline"></ion-icon>Don@ do Evento
+        <ion-icon name="star-outline"></ion-icon>{{$eventOwner['name']}}
       </p>
       <a href="#" class="btn btn-primary" id="event-submit">Confirmar Presença</a>
 
