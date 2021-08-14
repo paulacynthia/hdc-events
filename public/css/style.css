@@ -242,6 +242,13 @@ header {
     display: inline-block;
 }
 
+/*Edit Page: */
+
+.img-preview {
+    width: 100px;
+    margin-left: -75px;
+}
+
 /* Footer: */
 
 footer {
